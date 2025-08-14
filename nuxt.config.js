@@ -22,16 +22,16 @@ export default defineNuxtConfig({
 	app: {
 		head: {
 			link: [
-				//fonts from google fonts, basic latin characters
+				//fonts from google fonts
 				{
 					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css2?' + (
-									'family=Noto+Sans:ital,wght@0,400;1,400;0,700;1,700' +
-						'&family=Noto+Sans+Mono:ital,wght@0,400;1,400;0,700;1,700' +
-										'&family=Roboto:ital,wght@0,400;1,400;0,500;1,500' +//note 500, tailwind semibold
-						'&display=swap' +
-						'&subset=latin,latin-ext'
-					),
+					href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap',
+				},
+				//favicon instead of .ico file
+				{
+					rel: 'icon',
+					type: 'image/svg+xml',
+					href: 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="%239fffe0"/></svg>',
 				},
 			],
 		},

@@ -1,6 +1,6 @@
 {
 	"name": "fuji-site",
-	"description": "website at fujidesktop.app",
+	"description": "Static website at fujidesktop.app",
 	"license": "GPL-3.0-only",
 	"version": "1.0.0",
 	"type": "module",

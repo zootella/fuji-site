@@ -1,11 +1,14 @@
 /* this file is assets/css/main.css, made to get styles to actually cascade, like a whole sheet of them ;) */
 
-@font-face { /*yes, it's correct for font-face to go at the top, above the tailwind directives section below*/
-	font-family: "Ginto Rounded";
-	src: url('~/assets/fonts/ABCGintoRoundedVariableVF-Trial.woff2') format('woff2');
-	font-weight: 100 900; /* this file is a variable font, covering weights 100 to 900 */
-	font-display: swap; /* show text with a fallback font until the browser loads this custom font */
-}
+/* yes, it's correct for font-face to go at the top, above the tailwind directives section below */
+@font-face { font-display: block; font-weight: 300; font-style: normal; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-light.woff2') format('woff2'); }
+@font-face { font-display: block; font-weight: 400; font-style: normal; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-roman.woff2') format('woff2'); }
+@font-face { font-display: block; font-weight: 700; font-style: normal; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-bold.woff2') format('woff2'); }
+
+@font-face { font-display: block; font-weight: 300; font-style: italic; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-light-italic.woff2') format('woff2'); }
+@font-face { font-display: block; font-weight: 400; font-style: italic; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-roman-italic.woff2') format('woff2'); }
+@font-face { font-display: block; font-weight: 700; font-style: italic; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-bold-italic.woff2') format('woff2'); }
+/* font display block, not swap, to show up in this face or not at all! */
 
 /* tailwind directives; when tailwind builds our css, it replaces these three with the generated stylesheet in these three layers */
 @tailwind base;       /* "preflight" resets + any base-layer styles */

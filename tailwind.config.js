@@ -19,18 +19,16 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {//you can confirm these work by adding 'Papyrus' to the start of any list, lol
-				sans: [
-					'"Ginto Rounded"',//packaged font
-					'"Noto Sans"',//custom google font
+				helvetica: [
+					'"Helvetica Neue"',//packaged font
 					...defaultTheme.fontFamily.sans,//all the default system fallbacks
 				],
-				mono: [
-					'"Noto Sans Mono"',
-					...defaultTheme.fontFamily.mono,
-				],
-				roboto: [
-					'Roboto',
+				sans: [
 					...defaultTheme.fontFamily.sans,
+				],
+				mono: [
+					'"IBM Plex Mono"',
+					...defaultTheme.fontFamily.mono,
 				],
 			},
 		},
