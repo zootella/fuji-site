@@ -1,0 +1,27 @@
+/* this file is assets/css/main.css, made to get styles to actually cascade, like a whole sheet of them ;) */
+
+@font-face { /*yes, it's correct for font-face to go at the top, above the tailwind directives section below*/
+	font-family: "Ginto Rounded";
+	src: url('~/assets/fonts/ABCGintoRoundedVariableVF-Trial.woff2') format('woff2');
+	font-weight: 100 900; /* this file is a variable font, covering weights 100 to 900 */
+	font-display: swap; /* show text with a fallback font until the browser loads this custom font */
+}
+
+/* tailwind directives; when tailwind builds our css, it replaces these three with the generated stylesheet in these three layers */
+@tailwind base;       /* "preflight" resets + any base-layer styles */
+@tailwind components; /* component classes (e.g. form styles, if you enabled the forms plugin) */
+@tailwind utilities;  /* all the utility classes (e.g. .text-center, .mt-4, etc.) */
+
+/* define our customizations in our own @layer block after the directives to override these defaults */
+@layer base {
+
+	body { /* styling <body> here will also reach down to <div>, <p>, <h1> and the others, and <span> */
+		@apply font-sans;
+	}
+	code, pre {
+		@apply font-mono;
+	}
+	a {
+		@apply underline; /* tailwind unstiles links by default; get the underline back on */
+	}
+}

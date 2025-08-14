@@ -1,0 +1,33 @@
+{
+	"name": "fuji-site",
+	"description": "website at fujidesktop.app",
+	"license": "GPL-3.0-only",
+	"version": "1.0.0",
+	"type": "module",
+	"private": true,
+	"repository": "git@github.com:zootella/fuji-site.git",
+	"scripts": {
+		"local": "nuxt dev",
+		"build": "nuxt build",
+		"size": "nuxi analyze --no-serve",
+		"preview": "yarn build && wrangler dev",
+		"postinstall": "nuxt prepare",
+		"deploy": "yarn build && wrangler deploy",
+		"cf-typegen": "wrangler types"
+	},
+	"dependencies": {
+		"nuxt": "^3.17.2",
+		"vue": "^3.5.13",
+		"vue-router": "^4.5.1"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20250507.0",
+		"@nuxtjs/tailwindcss": "^6.14.0",
+		"@tailwindcss/forms": "^0.5.10",
+		"nitro-cloudflare-dev": "^0.2.2",
+		"nitropack": "^2.11.11",
+		"nuxi": "^3.25.1",
+		"wrangler": "^4.14.3"
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}
