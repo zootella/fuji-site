@@ -15,29 +15,31 @@ export default {
 		'./plugins/**/*.{js,ts}',
 	],
 
-	//default theme customizations and extensions
-	theme: {
-		extend: {
-			fontFamily: {//you can confirm these work by adding 'Papyrus' to the start of any list, lol
-				helvetica: [
-					'"Helvetica Neue"',//packaged font
-					...defaultTheme.fontFamily.sans,//all the default system fallbacks
-				],
-				sans: [
-					...defaultTheme.fontFamily.sans,
-				],
-				mono: [
-					'"IBM Plex Mono"',
-					...defaultTheme.fontFamily.mono,
-				],
-			},
-		},
-	},
-
 	//register custom utilities or extra pseudo-classes
 	plugins: [
 		forms,//normalize and styles form controls to inherit site typography and match Tailwind defaults
 	],
 
-	//here also is where we could add future flags and experimental features
+	//default theme customizations and extensions
+	theme: {
+		extend: {
+			fontFamily: {//you can confirm these work by adding 'Papyrus' to the start of any list, lol
+
+				//first, define default overrides; what fonts should show up for existing HTML tags like <p> and <code>
+				sans: [
+					...defaultTheme.fontFamily.sans,
+				],
+				mono: [
+					'"IBM Plex Mono"',//linked font
+					...defaultTheme.fontFamily.mono,
+				],
+
+				//second, setup named utilities, like "font-helvetica", from the property names below
+				helvetica: [
+					'"Helvetica Neue"',//packaged font
+					...defaultTheme.fontFamily.sans,//all the default system fallbacks
+				],
+			},
+		},
+	},
 }

@@ -1,4 +1,4 @@
-/* this file is assets/css/main.css, made to get styles to actually cascade, like a whole sheet of them ;) */
+/* this file is assets/css/style.css, made to get styles to actually cascade, like a whole sheet of them ;) */
 
 /* yes, it's correct for font-face to go at the top, above the tailwind directives section below */
 @font-face { font-display: block; font-weight: 300; font-style: normal; font-family: "Helvetica Neue"; src: url('~/assets/fonts/helvetica-neue-light.woff2') format('woff2'); }
